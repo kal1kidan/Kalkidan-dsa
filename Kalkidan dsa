@@ -3,12 +3,12 @@
 int main() {
     //  Q1
     std::cout << "This is a program that analyzes product sales and inventory for a store" << '\n';
-    std::cout << "Notice c++ is the used language" << "\n";
+    std::cout << "c++ is the used language" << "\n";
     //q2
-    std::string productName;
-    int  productCategory;
+    std::string proName;
+    int  proCategory;
     int initalInventoryQuantity;
-    float productPricePerUnit;
+    float proPricePerUnit;
     int ItemsSold;
     //q3
     int newInventory;
@@ -27,18 +27,18 @@ int main() {
     const double TAX_RATE = 0.15;
     //q7
         std::cout<<"enter a product name:" ;
-        std::getline(std::cin, productName);
+        std::getline(std::cin, proName);
         std::cout<<"enter inital inventory quantity: " << '\n';
         std::cin>>initalInventoryQuantity;
         std::cout<<"enter  product category :" << '\n';
-        std::cin>> productCategory;
+        std::cin>> proCategory;
         std::cout << "Enter product price per unit: " << '\n';
-        std::cin >> productPricePerUnit;
+        std::cin >> proPricePerUnit;
         std::cout<<"enter  Items sold :" << '\n';
         std::cin>>ItemsSold;
     //q8
     newInventory = (initalInventoryQuantity - ItemsSold);
-    totalProductSales =(ItemsSold *productPricePerUnit);
+    totalProductSales =(ItemsSold *proPricePerUnit);
     //q9
     if(newInventory < 10){
         inventoryStatus = "Low Inventory";
@@ -48,8 +48,8 @@ int main() {
     }
     //q10
     std::string message;
-     if (productCategory >= 1 && productCategory <= 5) {
-        switch (productCategory) {
+     if (proCategory >= 1 && proCategory <= 5) {
+        switch (proCategory) {
             case 1: message = "Category 1: Electronics";
             break;
             case 2: message = "Category 2: Groceries";
@@ -67,24 +67,23 @@ int main() {
     std::cout << message << '\n';
     //q11
     std::cout << "      Receipt    " <<'\n';
-    std::cout << "Product: " << productName << '\n';
+    std::cout << "Product: " << proName << '\n';
     std::cout << message << '\n';//it shows category
-    std::cout << "Price per unit: $" <<productPricePerUnit << '\n';
+    std::cout << "Price per unit: $" <<proPricePerUnit << '\n';
     std::cout << "Items Sold: " << ItemsSold << "\n";
      for (int i = 1; i <= ItemsSold; i++) {
-        std::cout << "Item " << i << ": $"  << productPricePerUnit << "\n";}
+        std::cout << "Item " << i << ": $"  << proPricePerUnit << "\n";}
         std::cout <<"total :$"<<totalProductSales<<'\n';
     //q12
     std::cout<<TAX_Rate__MACRO<<'\n';
     std::cout<<TAX_RATE<<'\n';
-    std::cout<<"******summery******"<<'\n';
+    std::cout<<"######summery######"<<'\n';
     //product detail 
-    std::cout<<"productName : "<<productName<<'\n';
-    std::cout<<"productCategory :"<<productCategory<<'\n';
-    std::cout<<"initalInventoryQuantity ;"<<initalInventoryQuantity<<'\n';
-    std::cout<<"productPricePerUnit : "<<productPricePerUnit<<'\n';
+    std::cout<<"product Name : "<<proName<<'\n';
+    std::cout<<"product Category :"<<proCategory<<'\n';
+    std::cout<<"initalInventoryQuantity :"<<initalInventoryQuantity<<'\n';
+    std::cout<<"product Price Per Unit : "<<proPricePerUnit<<'\n';
     std::cout<<"ItemsSold :"<<ItemsSold<<'\n';
-    //*************************
     std::cout<<"newInventory : "<<newInventory<<'\n';
     std::cout<<"totalProductSales : "<<totalProductSales<<'\n';
     std::cout<<"inventoryStatus : "<<inventoryStatus<<'\n';
